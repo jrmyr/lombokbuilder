@@ -22,11 +22,13 @@ public class BasicMatch extends Match {
     public static class BasicMatchBuilder {
 
         public Optional<BasicMatch> buildOptional() {
-            return Optional.of(this.build());
+            BasicMatch basicMatch = this.build();
+            return Optional.of(basicMatch);
         }
 
         public Optional<Match> buildOptionalMatch() {
-            return Optional.of(this.build());
+            Match match = this.build();
+            return Optional.of(match);
         }
 
     }

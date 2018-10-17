@@ -43,7 +43,8 @@ public class DetailedMatch extends Match {
         }
 
         public Optional<Match> buildOptionalMatch() {
-            return Optional.of(this.build());
+            Match match = this.build();
+            return Optional.of(match);
         }
 
         public DetailedMatchBuilder fromBasicMatch(BasicMatch basicMatch) {
