@@ -47,12 +47,13 @@ public class DetailedMatch extends Match {
             return Optional.of(match);
         }
 
+        // var x = a(x()); x.b(y());
+
         public DetailedMatchBuilder fromBasicMatch(BasicMatch basicMatch) {
-            return this
-                    .inputId(basicMatch.getInputId())
-                    .inputSourceName(basicMatch.getInputSourceName())
-                    .score(basicMatch.getScore())
-                    ;
+            DetailedMatchBuilder dmb = this.inputId(basicMatch.getInputId());
+            dmb.inputSourceName(basicMatch.getInputSourceName());
+            dmb.score(basicMatch.getScore());
+            return dmb;
         }
 
     }
